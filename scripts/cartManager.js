@@ -25,11 +25,11 @@ container.innerHTML = `
     <div class="progress">
         <div class="progress-bar progress-bar-custom" style="width: 2%;"></div>
     </div>
-    <div class="coffees-cart container d-flex flex-column align-items-center">
-        <div class="coffee-list d-flex justify-content-center mt-5">
+    <div class="coffees-cart container d-flex flex-column align-items-center flex-gap-3">
+        <div class="coffee-list d-flex justify-content-center mt-5 flex-wrap">
 
         </div>
-        <p class="result display-1 text-center"></p>
+        <p class="result display-1 text-center mt-8"></p>
         <div class="buttons">
             <button class="btn" style="background-color:brown; color:white">Confirmar</button>
             <button class="btn bg-secondary">Limpar Carrinho</button>
@@ -273,7 +273,7 @@ async function fillShoppingCart() {
             const index = Number(card.replace("card", ""));
             sum += cartStorage[card]*Number(coffees[index].price.toFixed(2));
             coffeList.innerHTML += `
-                <div class="card m-2 p-0 col-2 shadow-lg" style="width:15rem; height:18rem">
+                <div class="card m-4 p-0 col-2 shadow-lg" style="width:15rem; height:18rem">
                     <img src="${coffees[index].image}" class="card-img-top w-100 h-100" alt="${coffees[index].description}"/>
                     <div class="card-body">
                         <h5 class="card-title">${coffees[index].title}</h5>

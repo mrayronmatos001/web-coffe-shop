@@ -73,8 +73,8 @@ async function fillCards() {
     const coffees = await returnCoffees();
     coffees.forEach(cfe => {
         const cardHTML = `
-            <div class="card m-2 p-0 col-2 shadow-lg" style="width:15rem; height:25rem">
-                <img src="${cfe.image}" class="card-img-top w-100 h-100" alt="${cfe.description}"/>
+            <div class="card m-2 p-0 col-2 shadow-lg" style="width:15rem; height:24rem">
+                <img src="${cfe.image}" class="card-img-top" width="100%" height="65%" alt="${cfe.description}"/>
                 <div class="card-body">
                     <h5 class="card-title">${cfe.title}</h5>
                     <p class="card-text">Preço: R$${cfe.price.toFixed(2)}</p>
